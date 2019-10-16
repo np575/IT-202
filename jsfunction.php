@@ -33,11 +33,7 @@ function myValidationemail(inputEle){
                         document.body.appendChild(vele);
 			 
                }
-	if (value="")
-{
-	vele.innerText= "empt";
-}
-    
+	
 		 if (value.indexOf("@", 0) < 0)                 
     { 
         vele.innerText=  " Please enter a valid e-mail address."; 
@@ -113,8 +109,7 @@ return false;
 onchange ="Myvalidationcofirpass(this,password.value);"/>
 <input name="username"placeholder="enter username"/>
 
-<input type="submit" value="Submit"
-	 />
+<input type="submit" value="Submit" />
 </form>
 </body>
 </html>
