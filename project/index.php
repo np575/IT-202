@@ -1,10 +1,20 @@
 <?php
-session_start();
-echo "Hello, your user name is: " . $_SESSION['username'];
-if(!isset($_SESSION["username"])){
-header("Location: login.php");
-exit(); }
+//include auth.php file on all secure pages
+include("authorization.php");
 ?>
+<!DOCTYPE html>
 <html>
-<p>Welcome to Left4Good</p>
+<head>
+<meta charset="utf-8">
+<title>Welcome Home</title>
+<link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+<div class="form">
+<p>Welcome <?php echo $_SESSION['username']; ?>!</p>
+<p>This is secure area.</p>
+<p><a href="foodform.php">FoodPickup</a></p>
+<a href="logout.php">Logout</a>
+</div>
+</body>
 </html>

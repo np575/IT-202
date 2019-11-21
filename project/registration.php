@@ -41,7 +41,7 @@ function validate(){
 </head>
 <body>
 <?php
-require('db.php');
+require('dbconnection.php');
 // If form submitted, insert values into the database.
 if (isset($_REQUEST['username'])){
         // removes backslashes
@@ -57,7 +57,7 @@ if (isset($_REQUEST['username'])){
 	if(checkPasswords() === true ){
 	echo "<div class='form'>
 	<h3>You are not registered successfully.</h3>
-	<br/>Click here to <a href='login.php'>Login</a></div>";
+	<br/>Click here to <a href='loginpage.php'>Login</a></div>";
 	}
         else{
 	    $query = "INSERT into `users1` (username, password, email, trn_date)
@@ -65,7 +65,7 @@ if (isset($_REQUEST['username'])){
         $result = mysqli_query($con,$query);
             echo "<div class='form'>
 <h3>You are registered successfully.</h3>
-<br/>Click here to <a href='login.php'>Login</a>
+<br/>Click here to <a href='loginpage.php'>Login</a>
 <br/>
 <br/>Enter your information below  to register
 </div>";
