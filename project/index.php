@@ -14,6 +14,7 @@ include("authorization.php");
 <p>Welcome <?php echo $_SESSION['username']; ?>!</p>
 <p>This is secure area.</p>
 <p><a href="foodform.php">FoodPickup</a></p>
+<p> <a href="volunteer.php">Volunteer Form</a></p>
 <a href="logout.php">Logout</a>
 </div>
 </body>
